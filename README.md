@@ -1,196 +1,148 @@
 
-# 📱 Android Log Extraction and Reporting Tool (Forensic Utility)
 
-## 📌 Overview
+# 📱 Android Log Extraction and Reporting Tool
 
-This project is a **desktop-based Android Log Extraction and Reporting Tool** designed for **digital forensic investigation**.
-The tool connects an **Android device via USB** to a laptop and uses **ADB (Android Debug Bridge)** to extract system and user activity logs. Extracted logs are **parsed, analyzed, hashed, and compiled into a forensic report**.
+## 📌 Project Overview
 
-The application provides a **GUI interface** and supports extraction of:
+This project is an **Android Log Extraction and Reporting Tool** developed for **digital forensic investigation**.
+It connects an **Android device to a laptop via USB**, uses **ADB (Android Debug Bridge)** to extract logs, and generates structured outputs useful for forensic analysis.
 
-* Call logs
-* SMS logs
-* Browser activity logs
-* System / debug logs
-
-This tool is intended for **educational, research, and forensic investigation purposes**.
+The project is intended for **academic, research, and forensic learning purposes**.
 
 ---
 
-## 🎯 Key Features
-
-* USB-based Android device connection
-* ADB-powered log extraction
-* Modular log extraction (Call, SMS, Browser, Debug)
-* Hash generation for forensic integrity
-* Automated forensic report generation
-* GUI-based desktop application
-* Temporary raw log preservation
-* Suitable for evidence documentation
-
----
-
-## 🏗️ Project Architecture
+## 📂 Repository Structure
 
 ```
-Final Project V1/
+Android-Log-Extraction-Tool/
 │
-├── main.py                     # Main GUI application (Tkinter)
-├── requirements.txt            # Python dependencies
+├── Project_Outputs/
+│   ├── output_files.*
+│   ├── screenshots.*
+│   └── analysis_results.*
 │
-├── usermodules/                # Core forensic modules
-│   ├── Call_Logs.py             # Call log extraction
-│   ├── sms_Logs.py              # SMS log extraction
-│   ├── Browser_Logs.py          # Browser history/log extraction
-│   ├── debug_Logs.py            # System & debug logs extraction
-│   ├── hash.py                  # Hash generation for integrity
-│   └── generatereport.py        # Forensic report generation
-│
-├── tmp/                         # Temporary extracted raw logs
-│   ├── call_logs.txt
-│   ├── sms_logs.txt
-│   └── raw_debug_*.txt
-│
-├── dist/                        # Packaged / compiled modules
-│
-├── build/                       # Build artifacts (PyInstaller)
-│
-├── *.png                        # Screenshots & output visuals
+├── Published_Papers/
+│   ├── research_paper.pdf
+│   ├── conference_paper.pdf
+│   └── documentation.pdf
 │
 └── README.md
 ```
 
----
-
-## ⚙️ Technology Stack
-
-* **Programming Language:** Python 3
-* **GUI Framework:** Tkinter
-* **Android Interface:** ADB (Android Debug Bridge)
-* **Packaging:** PyInstaller
-* **Operating System:** Windows (tested)
+📦 **Complete source code is provided as a ZIP file via GitHub Releases** (see below).
 
 ---
 
-## 🔌 Prerequisites
+## 📦 Source Code (GitHub Release)
 
-* Python 3.x installed
-* ADB installed and added to system PATH
-* USB Debugging enabled on Android device
-* USB cable for device connection
-* Required Python libraries (see `requirements.txt`)
+Due to GitHub file size limitations, the **complete project source code** is uploaded as a **Release asset**.
 
----
+### 🔗 Download Full Project ZIP
 
-## 🚀 Installation & Setup
+➡️ Go to **Releases** section of this repository
+➡️ Download:
 
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/your-username/android-log-extraction-tool.git
-cd android-log-extraction-tool
+```
+Final_Project_V1.zip
 ```
 
-### 2️⃣ Install Dependencies
+The ZIP contains:
 
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ Verify ADB Connection
-
-```bash
-adb devices
-```
-
-Ensure the Android device is listed.
+* Full Python source code
+* GUI implementation
+* Log extraction modules
+* Report generation scripts
+* Temporary log handling
+* Build and dependency files
 
 ---
 
-## ▶️ How to Run the Tool
+## 🧩 Key Functionalities
 
-```bash
-python main.py
-```
-
-The GUI window will open, allowing you to:
-
-* Connect device
-* Extract logs
-* Generate reports
-
----
-
-## 🧪 Log Extraction Workflow
-
-1. Android device connected via USB
-2. ADB session established
-3. Logs extracted using shell commands
-4. Raw logs saved in `/tmp`
-5. Hash values generated
-6. Structured forensic report created
+* USB-based Android device connection
+* ADB-based log extraction
+* Call logs extraction
+* SMS logs extraction
+* Browser activity logs
+* System / debug logs
+* Hash generation for forensic integrity
+* Automated report generation
+* GUI-based execution
 
 ---
 
-## 📄 Forensic Report
+## 🛠️ Technologies Used
 
-The generated report includes:
-
-* Device interaction timestamp
-* Extracted log summaries
-* Hash values for integrity verification
-* Structured log sections for analysis
-
-This ensures **chain-of-custody support** and **evidence integrity**.
+* **Python 3**
+* **ADB (Android Debug Bridge)**
+* **Tkinter (GUI)**
+* **PyInstaller (Build)**
+* **Windows OS (tested)**
 
 ---
 
-## 🔐 Forensic Integrity
+## 📄 Published Papers Folder
 
-* Hashing ensures logs are **unaltered**
-* Raw logs preserved separately
-* Report generation is automated and repeatable
+The `Published_Papers` folder contains:
+
+* Research papers related to the project
+* Conference / journal publications
+* Supporting academic documentation
+
+These explain:
+
+* Forensic relevance
+* Methodology
+* Log analysis approach
+* Research outcomes
 
 ---
 
-## ⚠️ Limitations
+## 📊 Project Outputs Folder
 
-* Requires USB debugging enabled
-* Root access may be required for deeper logs
-* Tested primarily on Android devices with ADB support
-* Windows-focused deployment
+The `Project_Outputs` folder includes:
+
+* Sample extracted logs
+* Generated forensic reports
+* Output screenshots
+* Analysis results
+
+These files demonstrate:
+
+* Tool execution
+* Log extraction success
+* Reporting format
 
 ---
 
-## 📚 Use Cases
+## 🔐 Forensic Relevance
 
-* Academic forensic projects
-* Android system analysis
-* Digital evidence collection
-* Law enforcement training simulations
-* Security research
+* Maintains extracted logs separately
+* Supports evidence integrity using hashing
+* Suitable for forensic workflow demonstration
+* Can be used for training and academic evaluation
+
+---
+
+## ⚠️ Disclaimer
+
+This project is developed **strictly for educational and research purposes**.
+Accessing Android devices without proper authorization may be illegal.
 
 ---
 
 ## 👨‍💻 Author
 
 **Shivam Mulik**
-M.Tech – Cyber / Digital Forensics
-Academic Project
+(M.Tech – Cyber / Digital Forensics)
+-Academic Project
 
 ---
 
-## ⚖️ Disclaimer
+## ⭐ Future Scope
 
-This tool is developed **strictly for educational and forensic research purposes**.
-Unauthorized access to devices without permission may be illegal.
-
----
-
-## ⭐ Future Enhancements
-
-* SQLite database log parsing
-* Cloud-based report storage
-* Support for more Android versions
 * Advanced timeline reconstruction
-* Encrypted report export (PDF)
+* SQLite log parsing
+* PDF forensic report export
+* Support for newer Android versions
+* Cloud-based evidence storage
